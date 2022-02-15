@@ -1,1 +1,1 @@
-# clone-pick-git
+# clone-drop-the-code
