@@ -1,5 +1,7 @@
 package com.pg.pickgit.unit.authentication.dao;
 
+import com.pg.pickgit.authentication.domain.OAuthAccessTokenDao;
+import com.pg.pickgit.authentication.infrastructure.dao.CollectionOAuthAccessTokenDao;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

@@ -1,6 +1,16 @@
 package com.pg.pickgit.unit.authentication.application;
 
 
+import com.pg.pickgit.authentication.application.JwtTokenProvider;
+import com.pg.pickgit.authentication.application.OAuthService;
+import com.pg.pickgit.authentication.application.dto.OAuthProfileResponse;
+import com.pg.pickgit.authentication.application.dto.TokenDto;
+import com.pg.pickgit.authentication.domain.OAuthClient;
+import com.pg.pickgit.authentication.domain.user.AppUser;
+import com.pg.pickgit.authentication.domain.user.GuestUser;
+import com.pg.pickgit.authentication.domain.user.LoginUser;
+import com.pg.pickgit.authentication.infrastructure.dao.CollectionOAuthAccessTokenDao;
+import com.pg.pickgit.exception.authentication.InvalidTokenException;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -87,13 +97,13 @@ public class OAuthServiceTest {
         // then
         assertThat(token.getToken()).isEqualTo(JWT_TOKEN);
         verify(userRepository, times(1)).findByBasicProfile_Name(anyString());
-        verify(userRepository.times(1)).save(any(User.class));
+        verify(userRepository, times(1)).save(any(User.class));
         verify(jwtTokenProvider, times(1)).createToken(anyString());
 
-        verify(userRepository, times(1)).findByBasicProfile_Name(githubProfileResponse.getname());
+        verify(userRepository, times(1)).findByBasicProfile_Name(githubProfileResponse.getName());
         verify(userRepository, times(1)).save(user);
         verify(userSearchEngine, times(1)).save(any());
-        verify(jwtTokenProvider, times(1)).createToken(githubProfileResponse.getname());
+        verify(jwtTokenProvider, times(1)).createToken(githubProfileResponse.getName());
         verify(oAuthAccessTokenDao, times(1)).insert(JWT_TOKEN, OAUTH_ACCESS_TOKEN);
     }
 
@@ -127,7 +137,7 @@ public class OAuthServiceTest {
         TokenDto token = oAuthService.createToken(GITHUB_CODE);
 
         // then
-        assertThat(token.getToken()).isEqalTo(JWT_TOKEN);
+        assertThat(token.getToken()).isEqualTo(JWT_TOKEN);
         verify(userRepository, times(1)).findByBasicProfile_Name(anyString());
         verify(userRepository, never()).save(any(User.class));
         verify(jwtTokenProvider, times(1)).createToken(anyString());
@@ -170,7 +180,7 @@ public class OAuthServiceTest {
         given(oAuthAccessTokenDao.findByKeyToken(notSavedToken)).willReturn(Optional.empty());
 
         // then
-        assertThatThrownBy(()-> oAuthService.findRequestuserByToken(notSavedToken))
+        assertThatThrownBy(()-> oAuthService.findRequestUserByToken(notSavedToken))
                 .isInstanceOf(InvalidTokenException.class)
                 .hasFieldOrPropertyWithValue("errorCode", "A0001")
                 .hasFieldOrPropertyWithValue("httpStatus", HttpStatus.UNAUTHORIZED)
