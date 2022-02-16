@@ -11,6 +11,9 @@ import com.pg.pickgit.authentication.domain.user.GuestUser;
 import com.pg.pickgit.authentication.domain.user.LoginUser;
 import com.pg.pickgit.authentication.infrastructure.dao.CollectionOAuthAccessTokenDao;
 import com.pg.pickgit.exception.authentication.InvalidTokenException;
+import com.pg.pickgit.user.domain.User;
+import com.pg.pickgit.user.domain.repository.UserRepository;
+import com.pg.pickgit.user.domain.search.UserSearchEngine;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -40,7 +43,7 @@ public class OAuthServiceTest {
     private OAuthClient oAuthClient;
 
     @Mock
-    private UseRepository userRepository;
+    private UserRepository userRepository;
 
     @Mock
     private UserSearchEngine userSearchEngine;
@@ -143,7 +146,7 @@ public class OAuthServiceTest {
         verify(jwtTokenProvider, times(1)).createToken(anyString());
         verify(oAuthAccessTokenDao, times(1)).insert(anyString(), anyString());
 
-        verify(userRepository, times(1)).findBybasicProfile_Name(githubProfileResponse.getName());
+        verify(userRepository, times(1)).findByBasicProfile_Name(githubProfileResponse.getName());
         verify(userRepository, never()).save(user);
         verify(jwtTokenProvider, times(1)).createToken(githubProfileResponse.getName());
         verify(oAuthAccessTokenDao, times(1)).insert(JWT_TOKEN, OAUTH_ACCESS_TOKEN);
@@ -156,8 +159,8 @@ public class OAuthServiceTest {
         String username = "pick-git";
 
         // mock
-        given(jwtTokenProvider.getPayloadBykey(JWT_TOKEN, "username")).willReturn(username);
-        given(oAuthAccessTokenDao.findByKeyToken(JWT_TOKEN)).willReturn(Optional.ofNullable(OAUTH_ACCESS_TOKEN));
+        given(jwtTokenProvider.getPayloadByKey(JWT_TOKEN, "username")).willReturn(username);
+        given(oAuthAccessTokenDao.findByKeyToken(JWT_TOKEN)).willReturn(Optional.of(OAUTH_ACCESS_TOKEN));
 
         // when
         AppUser appUser = oAuthService.findRequestUserByToken(JWT_TOKEN);
