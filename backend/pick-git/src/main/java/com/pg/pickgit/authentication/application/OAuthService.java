@@ -2,11 +2,17 @@ package com.pg.pickgit.authentication.application;
 
 import com.pg.pickgit.authentication.application.dto.OAuthProfileResponse;
 import com.pg.pickgit.authentication.application.dto.TokenDto;
+import com.pg.pickgit.authentication.domain.OAuthAccessTokenDao;
 import com.pg.pickgit.authentication.domain.OAuthClient;
 import com.pg.pickgit.authentication.domain.user.AppUser;
 import com.pg.pickgit.authentication.domain.user.GuestUser;
 import com.pg.pickgit.authentication.domain.user.LoginUser;
 import com.pg.pickgit.exception.authentication.InvalidTokenException;
+import com.pg.pickgit.user.domain.User;
+import com.pg.pickgit.user.domain.profile.BasicProfile;
+import com.pg.pickgit.user.domain.profile.GithubProfile;
+import com.pg.pickgit.user.domain.repository.UserRepository;
+import com.pg.pickgit.user.domain.search.UserSearchEngine;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
@@ -22,7 +28,7 @@ public class OAuthService {
 
     private final OAuthClient githubOAuthClient;
     private final JwtTokenProvider jwtTokenProvider;
-    private final OAuthAccessTokenDto authAccessTokenDao;
+    private final OAuthAccessTokenDao authAccessTokenDao;
     private final UserRepository userRepository;
     private final UserSearchEngine userSearchEngine;
 

@@ -1,6 +1,8 @@
 package com.pg.pickgit.authentication.application.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.pg.pickgit.user.domain.profile.BasicProfile;
+import com.pg.pickgit.user.domain.profile.GithubProfile;
 import lombok.Builder;
 import lombok.Value;
 
