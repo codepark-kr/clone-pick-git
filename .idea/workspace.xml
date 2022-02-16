@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18ad6fda-a160-4859-9ca2-6634cd12df5e" name="Changes" comment="[CFG] Initialize Project" />
+    <list default="true" id="18ad6fda-a160-4859-9ca2-6634cd12df5e" name="Changes" comment="[ADD] Add OAuthServiceTest@UnitTest">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/settings.gradle" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +21,23 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="pickgit" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -87,7 +111,9 @@
       <option name="presentableId" value="Default" />
       <updated>1644890530851</updated>
       <workItem from="1644890532089" duration="2321000" />
-      <workItem from="1644915752464" duration="7098000" />
+      <workItem from="1644915752464" duration="7282000" />
+      <workItem from="1644977145508" duration="256000" />
+      <workItem from="1644977421317" duration="19000" />
     </task>
     <task id="LOCAL-00001" summary="[CFG] Initialize Project">
       <created>1644976492868</created>
@@ -103,7 +129,28 @@
       <option name="project" value="LOCAL" />
       <updated>1644976919426</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="[CFG] Initialize Project (idea files)">
+      <created>1644976961568</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1644976961569</updated>
+    </task>
+    <task id="LOCAL-00004" summary="[ADD] Add Applications, Header, empty test classes">
+      <created>1644977014665</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1644977014665</updated>
+    </task>
+    <task id="LOCAL-00005" summary="[ADD] Add OAuthServiceTest@UnitTest">
+      <created>1644977042921</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1644977042921</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,7 +172,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="HEAD" />
+                        <option value="origin/main" />
                       </list>
                     </value>
                   </entry>
@@ -136,9 +183,13 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="[CFG] Initialize Project" />
-    <option name="LAST_COMMIT_MESSAGE" value="[CFG] Initialize Project" />
+    <MESSAGE value="[CFG] Initialize Project (idea files)" />
+    <MESSAGE value="[ADD] Add Applications, Header, empty test classes" />
+    <MESSAGE value="[ADD] Add OAuthServiceTest@UnitTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="[ADD] Add OAuthServiceTest@UnitTest" />
   </component>
 </project>
