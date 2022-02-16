@@ -4,13 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18ad6fda-a160-4859-9ca2-6634cd12df5e" name="Changes" comment="[ADD] Add OAuthServiceTest@UnitTest">
+    <list default="true" id="18ad6fda-a160-4859-9ca2-6634cd12df5e" name="Changes" comment="[CFG] Change the location of setting files">
+      <change afterPath="$PROJECT_DIR$/backend/pick-git/src/test/resources/testImage1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/pick-git/src/test/resources/testImage2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pick-git/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/backend/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pick-git/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pick-git/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/pg/pickgit/PickGitApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pick-git/src/main/java/com/pg/pickgit/PickGitApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pick-git/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/pg/pickgit/PickGitApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/pg/pickgit/acceptance/AcceptanceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pick-git/src/test/java/com/pg/pickgit/acceptance/AcceptanceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/pg/pickgit/common/PickgitHeaders.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pick-git/src/test/java/com/pg/pickgit/common/PickgitHeaders.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/pg/pickgit/unit/authentication/application/OAuthServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pick-git/src/test/java/com/pg/pickgit/unit/authentication/application/OAuthServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pick-git/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pick-git/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pick-git/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pick-git/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +62,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitToolBoxStore">
@@ -76,7 +91,9 @@
     </option>
   </component>
   <component name="ProjectId" id="257udB3AlfMgc4pumwhie6BRPHe" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -85,12 +102,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../New Workspaces/Blueprints" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/backend/pick-git" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Personal-projects\drop-the-code\backend" />
+      <recent name="C:\Personal-projects\drop-the-code\backend\pick-git" />
     </key>
   </component>
   <component name="RunManager">
@@ -113,7 +131,10 @@
       <workItem from="1644890532089" duration="2321000" />
       <workItem from="1644915752464" duration="7282000" />
       <workItem from="1644977145508" duration="256000" />
-      <workItem from="1644977421317" duration="19000" />
+      <workItem from="1644977421317" duration="278000" />
+      <workItem from="1644977719381" duration="359000" />
+      <workItem from="1644978098736" duration="11000" />
+      <workItem from="1644978312042" duration="97000" />
     </task>
     <task id="LOCAL-00001" summary="[CFG] Initialize Project">
       <created>1644976492868</created>
@@ -150,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644977042921</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="[CFG] Change the location of setting files">
+      <created>1644977454888</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1644977454888</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,6 +218,7 @@
     <MESSAGE value="[CFG] Initialize Project (idea files)" />
     <MESSAGE value="[ADD] Add Applications, Header, empty test classes" />
     <MESSAGE value="[ADD] Add OAuthServiceTest@UnitTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="[ADD] Add OAuthServiceTest@UnitTest" />
+    <MESSAGE value="[CFG] Change the location of setting files" />
+    <option name="LAST_COMMIT_MESSAGE" value="[CFG] Change the location of setting files" />
   </component>
 </project>
