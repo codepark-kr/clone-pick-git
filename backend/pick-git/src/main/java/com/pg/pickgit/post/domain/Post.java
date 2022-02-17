@@ -1,8 +1,14 @@
 package com.pg.pickgit.post.domain;
 
+import com.pg.pickgit.comment.domain.Comment;
+import com.pg.pickgit.comment.domain.Comments;
 import com.pg.pickgit.post.domain.content.Image;
 import com.pg.pickgit.post.domain.content.Images;
 import com.pg.pickgit.post.domain.content.PostContent;
+import com.pg.pickgit.post.domain.content.like.Like;
+import com.pg.pickgit.post.domain.content.like.Likes;
+import com.pg.pickgit.post.domain.tag.PostTags;
+import com.pg.pickgit.tag.domain.Tag;
 import com.pg.pickgit.user.domain.User;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
@@ -46,7 +52,7 @@ public class Post {
     private String githubRepoUrl;
 
     @CreatedDate
-    private LocalDateTime createAt;
+    private LocalDateTime createdAt;
 
     @LastModifiedDate
     private LocalDateTime updatedAt;
@@ -74,7 +80,7 @@ public class Post {
         this.comments = comments;
         this.postTags = postTags;
         this.githubRepoUrl = githubRepoUrl;
-        this.createAt = createdAt;
+        this.createdAt = createdAt;
         this.updatedAt = updatedAt;
 
         images.belongTo(this);
@@ -190,14 +196,14 @@ public class Post {
         private User author;
         private Images images = new Images(List.of());
         private PostContent content;
-//        private Likes likes = new Likes();
-//        private Comments comments = new Comments();
-//        private PostTags postTags = new PostTags();
+        private Likes likes = new Likes();
+        private Comments comments = new Comments();
+        private PostTags postTags = new PostTags();
         private String githubRepoUrl;
         private LocalDateTime createdAt = null;
         private LocalDateTime updatedAt = null;
 
-//        private List<Tag> tags = new ArrayList<>();
+        private List<Tag> tags = new ArrayList<>();
 
         public Builder id(Long id) {
             this.id = id;
