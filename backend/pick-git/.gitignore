@@ -33,5 +33,11 @@ out/
 /nbdist/
 /.nb-gradle/
 
+### gradle ###
+/.gradle
+/backend/pick-git/.gradle
+.lock
+
+
 ### VS Code ###
 .vscode/
