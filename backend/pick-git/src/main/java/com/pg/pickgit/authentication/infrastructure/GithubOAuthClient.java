@@ -1,14 +1,15 @@
-package com.pg.pickgit.authentication.infrastructure.dto;
+package com.pg.pickgit.authentication.infrastructure;
 
 import com.pg.pickgit.authentication.application.dto.OAuthProfileResponse;
 import com.pg.pickgit.authentication.domain.OAuthClient;
+import com.pg.pickgit.authentication.infrastructure.dto.OAuthAccessTokenRequest;
+import com.pg.pickgit.authentication.infrastructure.dto.OAuthAccessTokenResponse;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Profile;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
-import org.springframework.security.oauth2.core.endpoint.OAuth2AccessTokenResponse;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
@@ -60,8 +61,8 @@ public class GithubOAuthClient implements OAuthClient {
                 new HttpEntity<>(githubAccessTokenRequest, headers);
         String accessTokenUrl = oauthBaseUrl + ACCESS_TOKEN_URL_SUFFIX;
 
-        OAuth2AccessTokenResponse response = new RestTemplate()
-                .exchange(accessTokenUrl, HttpMethod.POST, httpEntity, OAuth2AccessTokenResponse.class)
+        OAuthAccessTokenResponse response = new RestTemplate()
+                .exchange(accessTokenUrl, HttpMethod.POST, httpEntity, OAuthAccessTokenResponse.class)
                 .getBody();
         if(Objects.isNull(response)){ throw new PlatformHttpErrorException(); }
         return response.getAccessToken();
