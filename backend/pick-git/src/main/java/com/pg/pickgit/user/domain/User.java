@@ -1,6 +1,10 @@
 package com.pg.pickgit.user.domain;
 
+import com.pg.pickgit.post.domain.Post;
+import com.pg.pickgit.post.domain.Posts;
 import com.pg.pickgit.user.domain.follow.Follow;
+import com.pg.pickgit.user.domain.follow.Followers;
+import com.pg.pickgit.user.domain.follow.Followings;
 import com.pg.pickgit.user.domain.profile.BasicProfile;
 import com.pg.pickgit.user.domain.profile.GithubProfile;
 import org.springframework.data.annotation.PersistenceConstructor;
@@ -65,7 +69,7 @@ public class User {
         this.githubProfile = githubProfile;
         this.followers = followers;
         this.followings = followings;
-        this.Posts = posts;
+        this.posts = posts;
     }
 
     public void updateDescription(String description){ this.basicProfile.setDescription(description); }
