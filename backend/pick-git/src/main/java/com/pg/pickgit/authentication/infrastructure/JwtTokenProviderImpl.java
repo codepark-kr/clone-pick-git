@@ -1,4 +1,4 @@
-package com.pg.pickgit.authentication.infrastructure.dto;
+package com.pg.pickgit.authentication.infrastructure;
 
 import com.pg.pickgit.authentication.application.JwtTokenProvider;
 import com.pg.pickgit.exception.authentication.InvalidTokenException;

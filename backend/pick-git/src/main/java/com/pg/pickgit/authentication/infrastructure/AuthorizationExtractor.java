@@ -1,4 +1,4 @@
-package com.pg.pickgit.authentication.infrastructure.dto;
+package com.pg.pickgit.authentication.infrastructure;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Enumeration;
