@@ -51,7 +51,7 @@ public class PostTags {
 
     public void validateDuplicateTagAlreadyExistsInPost(Tag tag){
         boolean isDuplicate = postTags.stream()
-                .anyMatch(postTag -> postTag.hashSameTag(tag));
+                .anyMatch(postTag -> postTag.hasSameTag(tag));
 
         if(isDuplicate){
             throw new CannotAddTagException();
