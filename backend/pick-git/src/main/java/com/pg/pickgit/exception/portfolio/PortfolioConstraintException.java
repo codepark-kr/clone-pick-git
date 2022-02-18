@@ -1,4 +1,4 @@
-package com.pg.pickgit.portfolio;
+package com.pg.pickgit.exception.portfolio;
 
 import org.springframework.http.HttpStatus;
 
