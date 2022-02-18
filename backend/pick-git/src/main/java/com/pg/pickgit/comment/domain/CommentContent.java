@@ -1,5 +1,7 @@
 package com.pg.pickgit.comment.domain;
 
+import com.pg.pickgit.exception.post.CommentFormatException;
+
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import javax.persistence.Lob;

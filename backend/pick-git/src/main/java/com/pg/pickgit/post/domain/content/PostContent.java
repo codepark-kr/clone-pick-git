@@ -1,5 +1,7 @@
 package com.pg.pickgit.post.domain.content;
 
+import com.pg.pickgit.exception.post.PostFormatException;
+
 import javax.persistence.Embeddable;
 import javax.persistence.Lob;
 import java.util.Objects;

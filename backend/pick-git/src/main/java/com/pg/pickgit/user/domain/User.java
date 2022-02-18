@@ -1,5 +1,6 @@
 package com.pg.pickgit.user.domain;
 
+import com.pg.pickgit.exception.post.PostNotBelongToUserException;
 import com.pg.pickgit.post.domain.Post;
 import com.pg.pickgit.post.domain.Posts;
 import com.pg.pickgit.user.domain.follow.Follow;

@@ -1,5 +1,7 @@
 package com.pg.pickgit.post.domain.content.like;
 
+import com.pg.pickgit.exception.post.CannotUnlikeException;
+import com.pg.pickgit.exception.post.DuplicatedLikeException;
 import com.pg.pickgit.user.domain.User;
 
 import javax.persistence.CascadeType;

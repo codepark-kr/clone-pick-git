@@ -1,5 +1,6 @@
 package com.pg.pickgit.post.domain.tag;
 
+import com.pg.pickgit.exception.post.CannotAddTagException;
 import com.pg.pickgit.post.domain.Post;
 import com.pg.pickgit.tag.domain.Tag;
 

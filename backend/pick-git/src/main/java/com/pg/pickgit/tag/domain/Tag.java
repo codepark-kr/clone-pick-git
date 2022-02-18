@@ -1,7 +1,8 @@
 package com.pg.pickgit.tag.domain;
 
+import com.pg.pickgit.exception.post.TagFormatException;
+
 import javax.persistence.*;
-import java.util.Locale;
 import java.util.Objects;
 
 @Entity
