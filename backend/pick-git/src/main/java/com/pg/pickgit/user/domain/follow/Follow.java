@@ -1,6 +1,7 @@
 package com.pg.pickgit.user.domain.follow;
 
 
+import com.pg.pickgit.exception.user.SameSourceTargetUserException;
 import com.pg.pickgit.user.domain.User;
 
 import javax.persistence.*;

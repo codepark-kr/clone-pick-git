@@ -1,5 +1,8 @@
 package com.pg.pickgit.user.domain.follow;
 
+import com.pg.pickgit.exception.user.DuplicateFollowException;
+import com.pg.pickgit.exception.user.InvalidFollowException;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Embeddable;
 import javax.persistence.FetchType;
