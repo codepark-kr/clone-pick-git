@@ -4,6 +4,7 @@ import com.pg.pickgit.authentication.application.dto.OAuthProfileResponse;
 import com.pg.pickgit.authentication.domain.OAuthClient;
 import com.pg.pickgit.authentication.infrastructure.dto.OAuthAccessTokenRequest;
 import com.pg.pickgit.authentication.infrastructure.dto.OAuthAccessTokenResponse;
+import com.pg.pickgit.exception.platform.PlatformHttpErrorException;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Profile;
 import org.springframework.http.HttpEntity;
