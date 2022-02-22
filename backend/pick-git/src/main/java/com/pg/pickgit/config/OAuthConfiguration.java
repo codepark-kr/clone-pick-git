@@ -5,6 +5,9 @@ import com.pg.pickgit.authentication.presentation.AuthenticationPrincipalArgumen
 import com.pg.pickgit.authentication.presentation.interceptor.AuthenticationInterceptor;
 import com.pg.pickgit.authentication.presentation.interceptor.IgnoreAuthenticationInterceptor;
 import com.pg.pickgit.authentication.presentation.interceptor.PathMatchInterceptor;
+import com.pg.pickgit.config.auth_interceptor_register.register_type.AuthenticateStorageForRegisterType;
+import com.pg.pickgit.config.auth_interceptor_register.register_type.IgnoreAuthenticateStorageForRegisterType;
+import com.pg.pickgit.config.auth_interceptor_register.register_type.StorageForRegisterType;
 import org.springframework.http.HttpMethod;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
