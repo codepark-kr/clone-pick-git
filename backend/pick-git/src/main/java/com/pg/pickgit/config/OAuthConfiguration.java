@@ -5,9 +5,15 @@ import com.pg.pickgit.authentication.presentation.AuthenticationPrincipalArgumen
 import com.pg.pickgit.authentication.presentation.interceptor.AuthenticationInterceptor;
 import com.pg.pickgit.authentication.presentation.interceptor.IgnoreAuthenticationInterceptor;
 import com.pg.pickgit.authentication.presentation.interceptor.PathMatchInterceptor;
+import com.pg.pickgit.config.auth_interceptor_register.AutoAuthorizationInterceptorRegister;
+import com.pg.pickgit.config.auth_interceptor_register.UriParser;
 import com.pg.pickgit.config.auth_interceptor_register.register_type.AuthenticateStorageForRegisterType;
 import com.pg.pickgit.config.auth_interceptor_register.register_type.IgnoreAuthenticateStorageForRegisterType;
 import com.pg.pickgit.config.auth_interceptor_register.register_type.StorageForRegisterType;
+import com.pg.pickgit.config.auth_interceptor_register.scanner.ControllerScanner;
+import com.pg.pickgit.config.auth_interceptor_register.scanner.ForGuestScanner;
+import com.pg.pickgit.config.auth_interceptor_register.scanner.ForLoginUserScanner;
+import com.pg.pickgit.config.auth_interceptor_register.scanner.package_scanner.PackageScanner;
 import org.springframework.http.HttpMethod;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -74,7 +80,7 @@ public class OAuthConfiguration implements WebMvcConfigurer {
     }
 
     private UriParser getUriParser(){
-        return new UrlParser(
+        return new UriParser(
                 new ControllerScanner(parseClassesNames()),
                 new ForGuestScanner(),
                 new ForLoginUserScanner()
