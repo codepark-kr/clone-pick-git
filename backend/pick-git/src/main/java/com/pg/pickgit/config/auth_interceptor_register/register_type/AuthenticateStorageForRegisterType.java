@@ -20,8 +20,6 @@ public class AuthenticateStorageForRegisterType implements StorageForRegisterTyp
     @Override
     public boolean isSatisfiedBy(RegisterType registerType) { return registerType == TYPE;  }
 
-    ;
-
     @Override
     public void put(String key, HttpMethod value){
         List<HttpMethod> httpMethods = cache.computeIfAbsent(key, k -> new ArrayList<>());
@@ -30,5 +28,4 @@ public class AuthenticateStorageForRegisterType implements StorageForRegisterTyp
 
     @Override
     public RegisterType getType() { return TYPE; }
-
 }

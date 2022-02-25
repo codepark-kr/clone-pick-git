@@ -41,7 +41,7 @@ public class EmbeddedRedisConfiguration {
     public RedisConnectionFactory redisConnectionFactory(){ return new LettuceConnectionFactory(LOCAL_HOST, port); }
 
     @PostConstruct
-    public void redisServer() throws IOException(){
+    public void redisServer() throws IOException{
         int redisPort = isRedisRunning() ? findAvailablePort() : port;
         if(isArmMac()){ redisServer = new RedisServer(Objects.requireNonNull(getRedisFileForArcMac()), redisPort); }
         if(!isArmMac()){ redisServer = new RedisServer(redisPort); }
@@ -49,7 +49,7 @@ public class EmbeddedRedisConfiguration {
     }
 
     private boolean isArmMac(){
-        return Objects.equals(System.getProperty("os.arch"), "aarch64") &&
+        return Objects.equals(System.getProperty("os.arch"), "arch64") &&
                 Objects.equals(System.getProperty("os.name"), "Mac OS X");
     }
 

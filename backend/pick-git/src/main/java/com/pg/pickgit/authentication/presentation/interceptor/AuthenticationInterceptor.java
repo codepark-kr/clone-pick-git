@@ -1,7 +1,7 @@
 package com.pg.pickgit.authentication.presentation.interceptor;
 
 import com.pg.pickgit.authentication.application.OAuthService;
-import com.pg.pickgit.authentication.infrastructure.dto.AuthorizationExtractor;
+import com.pg.pickgit.authentication.infrastructure.AuthorizationExtractor;
 import com.pg.pickgit.exception.authentication.InvalidTokenException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
