@@ -35,9 +35,8 @@ out/
 
 ### gradle ###
 /.gradle
-/backend/pick-git/.gradle
 .lock
-
+backend/pick-git/.gradle
 
 ### VS Code ###
 .vscode/
